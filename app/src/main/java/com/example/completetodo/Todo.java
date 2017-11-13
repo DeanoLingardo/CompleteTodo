@@ -13,17 +13,30 @@ public class Todo {
     private String mDetail;
     private Date mDate;
     private boolean mIsComplete;
+    
+
+    public Todo() {
+        mId = UUID.randomUUID();
+        mDate = new Date();
+    }
 
     public UUID getmId() {
         return mId;
     }
 
-    public void setmId(UUID mId) {
-        this.mId = mId;
+    public String getmTitle() {
+        return mTitle;
     }
 
-    public Todo() {
-        mId = UUID.randomUUID();
-        mDate = new Date();
+    public void setmTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
+
+    public Date getmDate() {
+        return mDate;
+    }
+
+    public void setmIsComplete(boolean mIsComplete) {
+        this.mIsComplete = mIsComplete;
     }
 }

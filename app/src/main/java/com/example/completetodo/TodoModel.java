@@ -42,7 +42,7 @@ public class TodoModel {
     public Todo getTodo(UUID todoId) {
 
         for (Todo todo : mTodoList) {
-            if (todo.getId().equals(todoId)){
+            if (todo.getmId().equals(todoId)){
                 return todo;
             }
         }
