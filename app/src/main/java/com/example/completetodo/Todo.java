@@ -39,4 +39,24 @@ public class Todo {
     public void setmIsComplete(boolean mIsComplete) {
         this.mIsComplete = mIsComplete;
     }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public Date getDate() {
+        return mDate;
+    }
+
+    public void setTitle(String title) {
+        this.mTitle = title;
+    }
+
+    public void setComplete(boolean complete) {
+        this.mIsComplete = complete;
+    }
+
+    public UUID getId() {
+        return mId;
+    }
 }

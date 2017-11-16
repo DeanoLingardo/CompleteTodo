@@ -42,12 +42,7 @@ public class TodoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        /*
-        mTodo = new Todo();
-        // TODO: refactor
-        mTodo.setTitle("Test title");
-        mTodo.setComplete(true);
-        */
+
         UUID todoId = (UUID) getArguments().getSerializable(ARG_TODO_ID);
         mTodo = TodoModel.get(getActivity()).getTodo(todoId);
 
@@ -62,7 +57,7 @@ public class TodoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_todo, container, false);
 
         mEditTextTitle = (EditText) view.findViewById(R.id.todo_title);
-        mEditTextTitle.setText(mTodo.getmTitle());
+        mEditTextTitle.setText(mTodo.getTitle());
         mEditTextTitle.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -71,7 +66,7 @@ public class TodoFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mTodo.setmTitle(s.toString());
+                mTodo.setTitle(s.toString());
             }
 
             @Override
@@ -81,7 +76,7 @@ public class TodoFragment extends Fragment {
         });
 
         mButtonDate = (Button) view.findViewById(R.id.todo_date);
-        mButtonDate.setText(mTodo.getmDate().toString());
+        mButtonDate.setText(mTodo.getDate().toString());
         mButtonDate.setEnabled(false);
 
         mCheckBoxIsComplete = (CheckBox) view.findViewById(R.id.todo_complete);
@@ -89,7 +84,7 @@ public class TodoFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Log.d("DEBUG **** TodoFragment","called onCheckedChanged");
-                mTodo.setmIsComplete(isChecked);
+                mTodo.setComplete(isChecked);
             }
         });
 
