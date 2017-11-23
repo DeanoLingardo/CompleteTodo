@@ -1,4 +1,4 @@
 # CompleteTodo
-Complete Android ToDo application 
-
+THIS APP HATES ME SO IGNORE IT
+THIS APP HATES ME SO IGNORE IT
 THIS APP HATES ME SO IGNORE IT
